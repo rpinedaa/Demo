@@ -2,7 +2,8 @@ package com.example.prueba;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+//import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 
@@ -62,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rv = (RecyclerView) findViewById(R.id.recycler_view);
         rv.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager lyMngr= new GridLayoutManager(getApplicationContext(),2);
+        //RecyclerView.LayoutManager lyMngr= new GridLayoutManager(getApplicationContext(),2);
+        LinearLayoutManager lyMngr= new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(lyMngr);
 
         AndroidDataAdapter adp = new AndroidDataAdapter(getApplicationContext(), ts);
